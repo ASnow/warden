@@ -20,6 +20,7 @@ module Warden
       end
       
       def on message, client
+        p ['Exchange', message]
         @main.push message
       end
       def close client

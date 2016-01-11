@@ -12,7 +12,6 @@ require "warden/server"
 require "warden/clients/publisher"
 require "warden/clients/consumer"
 
-
 module Warden
   # Your code goes here...
 end

@@ -10,6 +10,7 @@ module Warden
       end
       
       def on message, client
+        p ['Hallway', message]
         command, param = message
         if command == 'login'
           channel = Exchange.get param

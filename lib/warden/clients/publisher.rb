@@ -6,7 +6,9 @@ module Warden
         EM.run do
           conn = EventMachine::WebSocketClient.connect("ws://#{ip}:8080/")
           conn.callback do
+            puts "Open socket"
             conn.send_msg JSON.dump ["warden"]
+            yield conn
           end
 
           conn.errback do |e|
